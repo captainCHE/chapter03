@@ -1,0 +1,17 @@
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("请输入4位的会员卡号：");
+		int card = input.nextInt();
+		if (999 < card & card < 10000) {
+			int g = card % 10;// 个位数
+			int s = card / 10 % 10;// 十位数
+			int b = card / 100 % 10;// 百位数
+			int q = card / 1000;// 千位数
+			int total = g + s + b + q;// 各个位上的数之和
+			System.out.println("会员卡号" + card + "各个位数之和是：" + total);
+		} else {
+			System.out.println("输入格式错误！");
+		}
+
+	}
